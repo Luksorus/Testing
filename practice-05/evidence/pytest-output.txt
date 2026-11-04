@@ -1,0 +1,23 @@
+============================= test session starts =============================
+collecting ... collected 8 items
+
+test_order_service.py::test_place_order_saved_notifies_once[book] PASSED [ 12%]
+test_order_service.py::test_place_order_saved_notifies_once[pen] PASSED  [ 25%]
+test_order_service.py::test_place_order_saved_notifies_once[laptop] PASSED [ 37%]
+test_order_service.py::test_place_order_failed_does_not_notify PASSED    [ 50%]
+test_order_service.py::test_place_order_storage_exception_propagates_without_notification PASSED [ 62%]
+test_order_service.py::test_get_order_existing_returns_storage_data PASSED [ 75%]
+test_order_service.py::test_get_order_missing_returns_none PASSED        [ 87%]
+test_order_service.py::test_get_order_storage_error_propagates PASSED    [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.14-final-0 _______________
+
+Name               Stmts   Miss  Cover   Missing
+------------------------------------------------
+order_service.py      15      0   100%
+------------------------------------------------
+TOTAL                 15      0   100%
+Coverage JSON written to file evidence/coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+============================== 8 passed in 0.18s ==============================
