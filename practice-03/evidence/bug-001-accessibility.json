@@ -1,0 +1,20 @@
+{
+  "url": "https://www.dns-shop.ru/cart/?activeTabId=1",
+  "observation": "В дереве доступности обе кнопки изменения количества имеют роль button без названия.",
+  "buttons": [
+    {
+      "ariaLabel": null,
+      "ariaLabelledby": null,
+      "html": "<button class=\"count-buttons__button count-buttons__button_minus\"><i class=\"count-buttons__icon count-buttons__icon-minus\"></i></button>",
+      "text": "",
+      "title": null
+    },
+    {
+      "ariaLabel": null,
+      "ariaLabelledby": null,
+      "html": "<button class=\"count-buttons__button count-buttons__button_plus\"><i class=\"count-buttons__icon count-buttons__icon-plus\"></i></button>",
+      "text": "",
+      "title": null
+    }
+  ]
+}
