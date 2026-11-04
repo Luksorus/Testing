@@ -9,3 +9,4 @@
 | 1 | Разработка рабочей тестовой документации: The Internet / Checkboxes | [Открыть](practice-01/README.md) |
 | 2 | Разработка плана тестирования: The Internet / Checkboxes | [Открыть](practice-02/README.md) |
 | 3 | Smoke-тестирование и баг-репорты: DNS | [Открыть](practice-03/README.md) |
+| 4 | Юнит-тестирование на Python: Calculator и pytest | [Открыть](practice-04/README.md) |

@@ -1,0 +1,54 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Практическая №4 — результаты pytest</title><style>body{font:18px system-ui;margin:42px;background:#f4f6fa;color:#172436}main{max-width:1100px;margin:auto}h1{font-size:30px}p{color:#40516a}.cards{display:flex;gap:18px;margin:24px 0}.card{background:white;padding:20px 28px;border-radius:12px;flex:1}.value{display:block;font-size:38px;font-weight:700;color:#157544}pre{background:#172436;color:#eef4fa;padding:24px;border-radius:12px;font:16px/1.55 Consolas,monospace;overflow:auto}details{margin-top:20px}small{color:#40516a}</style><main><h1>Практическая №4: юнит-тесты Calculator</h1><p>Фактический результат запуска pytest и pytest-cov</p><div class="cards"><div class="card"><span class="value">31 / 31</span>тестовых случаев пройдено</div><div class="card"><span class="value">100%</span>покрытие строк (11 из 11)</div><div class="card"><span class="value">90%</span>минимальный порог задания</div></div><pre>Name            Stmts   Miss  Cover   Missing
+---------------------------------------------
+calculator.py      11      0   100%
+---------------------------------------------
+TOTAL              11      0   100%
+Coverage JSON written to file evidence/coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+============================= 31 passed in 0.12s ==============================</pre><small>Python 3.12.14 · pytest 9.2.0 · pytest-cov 7.1.0 · coverage 7.17.1</small><details><summary>Полный вывод запуска</summary><pre>============================= test session starts =============================
+collecting ... collected 31 items
+
+test_calculator.py::test_add_integers[positive] PASSED                   [  3%]
+test_calculator.py::test_add_integers[opposite-signs] PASSED             [  6%]
+test_calculator.py::test_add_integers[zeros] PASSED                      [  9%]
+test_calculator.py::test_add_integers[negative-second] PASSED            [ 12%]
+test_calculator.py::test_add_integers[large-integers] PASSED             [ 16%]
+test_calculator.py::test_add_floats[0.1-0.2-0.3] PASSED                  [ 19%]
+test_calculator.py::test_add_floats[1.5--2.25--0.75] PASSED              [ 22%]
+test_calculator.py::test_subtract_integers[positive] PASSED              [ 25%]
+test_calculator.py::test_subtract_integers[zeros] PASSED                 [ 29%]
+test_calculator.py::test_subtract_integers[zero-first] PASSED            [ 32%]
+test_calculator.py::test_subtract_integers[negatives] PASSED             [ 35%]
+test_calculator.py::test_subtract_integers[large-integers] PASSED        [ 38%]
+test_calculator.py::test_subtract_floats[0.3-0.1-0.2] PASSED             [ 41%]
+test_calculator.py::test_subtract_floats[2-0.5-1.5] PASSED               [ 45%]
+test_calculator.py::test_multiply_integers[positive] PASSED              [ 48%]
+test_calculator.py::test_multiply_integers[zero] PASSED                  [ 51%]
+test_calculator.py::test_multiply_integers[opposite-signs] PASSED        [ 54%]
+test_calculator.py::test_multiply_integers[negatives] PASSED             [ 58%]
+test_calculator.py::test_multiply_integers[large-integers] PASSED        [ 61%]
+test_calculator.py::test_multiply_floats[0.1-0.2-0.02] PASSED            [ 64%]
+test_calculator.py::test_multiply_floats[3--0.5--1.5] PASSED             [ 67%]
+test_calculator.py::test_divide[positive] PASSED                         [ 70%]
+test_calculator.py::test_divide[zero-numerator] PASSED                   [ 74%]
+test_calculator.py::test_divide[opposite-signs] PASSED                   [ 77%]
+test_calculator.py::test_divide[negatives] PASSED                        [ 80%]
+test_calculator.py::test_divide[fraction] PASSED                         [ 83%]
+test_calculator.py::test_divide[large-numbers] PASSED                    [ 87%]
+test_calculator.py::test_divide_by_zero[positive-numerator] PASSED       [ 90%]
+test_calculator.py::test_divide_by_zero[zero-numerator] PASSED           [ 93%]
+test_calculator.py::test_divide_by_zero[float-zero] PASSED               [ 96%]
+test_calculator.py::test_divide_by_zero[negative-float-zero] PASSED      [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.14-final-0 _______________
+
+Name            Stmts   Miss  Cover   Missing
+---------------------------------------------
+calculator.py      11      0   100%
+---------------------------------------------
+TOTAL              11      0   100%
+Coverage JSON written to file evidence/coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+============================= 31 passed in 0.12s ==============================
+</pre></details></main></html>
