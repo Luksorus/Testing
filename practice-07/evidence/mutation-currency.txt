@@ -1,0 +1,27 @@
+============================= test session starts =============================
+collecting ... collected 2 items
+
+tests/test_api.py::test_currency_price_uses_stub_rate[dollars] FAILED    [ 50%]
+tests/test_api.py::test_currency_price_uses_stub_rate[euros] FAILED      [100%]
+
+================================== FAILURES ===================================
+_________________ test_currency_price_uses_stub_rate[dollars] _________________
+tests\test_api.py:262: in test_currency_price_uses_stub_rate
+    assert response.json()["price"] == pytest.approx(expected)
+E   assert 50000.0 == 5.0 � 5.0e-06
+E
+E     comparison failed
+E     Obtained: 50000.0
+E     Expected: 5.0 � 5.0e-06
+__________________ test_currency_price_uses_stub_rate[euros] __________________
+tests\test_api.py:262: in test_currency_price_uses_stub_rate
+    assert response.json()["price"] == pytest.approx(expected)
+E   assert 25000.0 == 10.0 � 1.0e-05
+E
+E     comparison failed
+E     Obtained: 25000.0
+E     Expected: 10.0 � 1.0e-05
+=========================== short test summary info ===========================
+FAILED tests/test_api.py::test_currency_price_uses_stub_rate[dollars] - asser...
+FAILED tests/test_api.py::test_currency_price_uses_stub_rate[euros] - assert ...
+============================== 2 failed in 0.83s ==============================

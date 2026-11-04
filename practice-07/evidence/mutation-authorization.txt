@@ -1,0 +1,35 @@
+============================= test session starts =============================
+collecting ... collected 4 items
+
+tests/test_api.py::test_viewer_write_forbidden[create] FAILED            [ 25%]
+tests/test_api.py::test_viewer_write_forbidden[replace] FAILED           [ 50%]
+tests/test_api.py::test_viewer_write_forbidden[patch] FAILED             [ 75%]
+tests/test_api.py::test_viewer_write_forbidden[delete] FAILED            [100%]
+
+================================== FAILURES ===================================
+_____________________ test_viewer_write_forbidden[create] _____________________
+tests\test_api.py:62: in test_viewer_write_forbidden
+    assert response.status_code == 403
+E   assert 201 == 403
+E    +  where 201 = <Response [201 Created]>.status_code
+____________________ test_viewer_write_forbidden[replace] _____________________
+tests\test_api.py:62: in test_viewer_write_forbidden
+    assert response.status_code == 403
+E   assert 200 == 403
+E    +  where 200 = <Response [200 OK]>.status_code
+_____________________ test_viewer_write_forbidden[patch] ______________________
+tests\test_api.py:62: in test_viewer_write_forbidden
+    assert response.status_code == 403
+E   assert 200 == 403
+E    +  where 200 = <Response [200 OK]>.status_code
+_____________________ test_viewer_write_forbidden[delete] _____________________
+tests\test_api.py:62: in test_viewer_write_forbidden
+    assert response.status_code == 403
+E   assert 204 == 403
+E    +  where 204 = <Response [204 No Content]>.status_code
+=========================== short test summary info ===========================
+FAILED tests/test_api.py::test_viewer_write_forbidden[create] - assert 201 ==...
+FAILED tests/test_api.py::test_viewer_write_forbidden[replace] - assert 200 =...
+FAILED tests/test_api.py::test_viewer_write_forbidden[patch] - assert 200 == 403
+FAILED tests/test_api.py::test_viewer_write_forbidden[delete] - assert 204 ==...
+============================== 4 failed in 0.96s ==============================

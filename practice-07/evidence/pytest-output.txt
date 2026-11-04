@@ -1,0 +1,103 @@
+============================= test session starts =============================
+collecting ... collected 84 items
+
+tests/test_api.py::test_health_returns_ok_without_auth PASSED            [  1%]
+tests/test_api.py::test_login_success_returns_bearer_token PASSED        [  2%]
+tests/test_api.py::test_login_bad_credentials_returns_401[wrong-password] PASSED [  3%]
+tests/test_api.py::test_login_bad_credentials_returns_401[unknown-user] PASSED [  4%]
+tests/test_api.py::test_login_invalid_body_returns_422[empty] PASSED     [  5%]
+tests/test_api.py::test_login_invalid_body_returns_422[missing-password] PASSED [  7%]
+tests/test_api.py::test_login_invalid_body_returns_422[empty-username] PASSED [  8%]
+tests/test_api.py::test_protected_request_invalid_auth_returns_401[missing] PASSED [  9%]
+tests/test_api.py::test_protected_request_invalid_auth_returns_401[invalid-token] PASSED [ 10%]
+tests/test_api.py::test_protected_request_invalid_auth_returns_401[wrong-scheme] PASSED [ 11%]
+tests/test_api.py::test_expired_token_returns_401 PASSED                 [ 13%]
+tests/test_api.py::test_viewer_write_forbidden[create] PASSED            [ 14%]
+tests/test_api.py::test_viewer_write_forbidden[replace] PASSED           [ 15%]
+tests/test_api.py::test_viewer_write_forbidden[patch] PASSED             [ 16%]
+tests/test_api.py::test_viewer_write_forbidden[delete] PASSED            [ 17%]
+tests/test_api.py::test_viewer_cannot_change_slots PASSED                [ 19%]
+tests/test_api.py::test_create_course_returns_201_and_exact_fields PASSED [ 20%]
+tests/test_api.py::test_create_course_defaults_slots_to_zero PASSED      [ 21%]
+tests/test_api.py::test_get_course_returns_saved_data PASSED             [ 22%]
+tests/test_api.py::test_list_courses_is_sorted_by_id PASSED              [ 23%]
+tests/test_api.py::test_each_test_starts_with_empty_database PASSED      [ 25%]
+tests/test_api.py::test_put_replaces_all_fields PASSED                   [ 26%]
+tests/test_api.py::test_put_requires_all_fields_and_leaves_data_unchanged PASSED [ 27%]
+tests/test_api.py::test_patch_changes_only_provided_field PASSED         [ 28%]
+tests/test_api.py::test_delete_returns_empty_204_and_followup_get_404 PASSED [ 29%]
+tests/test_api.py::test_missing_course_returns_404[read] PASSED          [ 30%]
+tests/test_api.py::test_missing_course_returns_404[replace] PASSED       [ 32%]
+tests/test_api.py::test_missing_course_returns_404[patch] PASSED         [ 33%]
+tests/test_api.py::test_missing_course_returns_404[delete] PASSED        [ 34%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[empty-name] PASSED [ 35%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[blank-name] PASSED [ 36%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[long-name] PASSED [ 38%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[zero-price] PASSED [ 39%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[negative-price] PASSED [ 40%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[wrong-price-type] PASSED [ 41%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[negative-slots] PASSED [ 42%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[above-limit] PASSED [ 44%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[float-slots] PASSED [ 45%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[bool-slots] PASSED [ 46%]
+tests/test_api.py::test_invalid_post_returns_422_without_creating_data[extra-field] PASSED [ 47%]
+tests/test_api.py::test_invalid_patch_returns_422_without_modifying_data[empty] PASSED [ 48%]
+tests/test_api.py::test_invalid_patch_returns_422_without_modifying_data[null-name] PASSED [ 50%]
+tests/test_api.py::test_invalid_patch_returns_422_without_modifying_data[null-slots] PASSED [ 51%]
+tests/test_api.py::test_invalid_patch_returns_422_without_modifying_data[above-limit] PASSED [ 52%]
+tests/test_api.py::test_duplicate_name_returns_409_and_keeps_original PASSED [ 53%]
+tests/test_api.py::test_rename_conflict_rolls_back[replace] PASSED       [ 54%]
+tests/test_api.py::test_rename_conflict_rolls_back[partial-update] PASSED [ 55%]
+tests/test_api.py::test_slots_delta_updates_value[return-slots] PASSED   [ 57%]
+tests/test_api.py::test_slots_delta_updates_value[enroll] PASSED         [ 58%]
+tests/test_api.py::test_slots_delta_updates_value[lower-bound] PASSED    [ 59%]
+tests/test_api.py::test_slots_delta_updates_value[upper-bound] PASSED    [ 60%]
+tests/test_api.py::test_slots_outside_bounds_returns_409_and_keeps_value[below-zero] PASSED [ 61%]
+tests/test_api.py::test_slots_outside_bounds_returns_409_and_keeps_value[above-thirty] PASSED [ 63%]
+tests/test_api.py::test_invalid_delta_returns_422_without_modifying_data[zero] PASSED [ 64%]
+tests/test_api.py::test_invalid_delta_returns_422_without_modifying_data[fraction] PASSED [ 65%]
+tests/test_api.py::test_invalid_delta_returns_422_without_modifying_data[string] PASSED [ 66%]
+tests/test_api.py::test_invalid_delta_returns_422_without_modifying_data[boolean] PASSED [ 67%]
+tests/test_api.py::test_slots_for_missing_course_returns_404 PASSED      [ 69%]
+tests/test_api.py::test_q_filter_is_case_insensitive_including_cyrillic PASSED [ 70%]
+tests/test_api.py::test_q_filter_treats_wildcards_literally PASSED       [ 71%]
+tests/test_api.py::test_price_filters_include_boundaries PASSED          [ 72%]
+tests/test_api.py::test_limit_offset_paginate_sorted_result PASSED       [ 73%]
+tests/test_api.py::test_invalid_list_parameters_return_422[zero-limit] PASSED [ 75%]
+tests/test_api.py::test_invalid_list_parameters_return_422[excess-limit] PASSED [ 76%]
+tests/test_api.py::test_invalid_list_parameters_return_422[negative-offset] PASSED [ 77%]
+tests/test_api.py::test_invalid_list_parameters_return_422[reversed-prices] PASSED [ 78%]
+tests/test_api.py::test_invalid_list_parameters_return_422[negative-price] PASSED [ 79%]
+tests/test_api.py::test_currency_price_uses_stub_rate[dollars] PASSED    [ 80%]
+tests/test_api.py::test_currency_price_uses_stub_rate[euros] PASSED      [ 82%]
+tests/test_api.py::test_rate_service_failure_returns_502 PASSED          [ 83%]
+tests/test_api.py::test_unknown_currency_returns_422_without_rate_call PASSED [ 84%]
+tests/test_api.py::test_price_for_missing_course_returns_404_without_rate_call PASSED [ 85%]
+tests/test_api.py::test_ids_remain_unique_after_deleting_middle_course PASSED [ 86%]
+tests/test_api.py::test_default_database_dependency_works_without_override PASSED [ 88%]
+tests/test_rates.py::test_rate_client_reads_rate_from_stubbed_http PASSED [ 89%]
+tests/test_rates.py::test_invalid_rate_payload_raises_service_error[missing] PASSED [ 90%]
+tests/test_rates.py::test_invalid_rate_payload_raises_service_error[negative] PASSED [ 91%]
+tests/test_rates.py::test_invalid_rate_payload_raises_service_error[not-numeric] PASSED [ 92%]
+tests/test_rates.py::test_invalid_rate_payload_raises_service_error[null] PASSED [ 94%]
+tests/test_rates.py::test_invalid_rate_payload_raises_service_error[infinite] PASSED [ 95%]
+tests/test_rates.py::test_rate_network_error_is_wrapped PASSED           [ 96%]
+tests/test_rates.py::test_rates_dependency_constructs_client PASSED      [ 97%]
+warmup/test_id_collision.py::test_original_id_collision_is_detected XFAIL [ 98%]
+warmup/test_id_collision.py::test_fixed_ids_do_not_overwrite_existing_item PASSED [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.14-final-0 _______________
+
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+app\__init__.py       0      0   100%
+app\database.py      16      0   100%
+app\main.py         113      0   100%
+app\rates.py         16      0   100%
+app\schemas.py       34      0   100%
+-----------------------------------------------
+TOTAL               179      0   100%
+Coverage JSON written to file evidence/coverage.json
+Required test coverage of 85% reached. Total coverage: 100.00%
+======================== 83 passed, 1 xfailed in 5.11s ========================

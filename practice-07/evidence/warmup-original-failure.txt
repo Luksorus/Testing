@@ -1,0 +1,15 @@
+============================= test session starts =============================
+collecting ... collected 1 item
+
+warmup/test_id_collision.py::test_original_id_collision_is_detected FAILED [100%]
+
+================================== FAILURES ===================================
+___________________ test_original_id_collision_is_detected ____________________
+warmup\test_id_collision.py:34: in test_original_id_collision_is_detected
+    check_no_overwrite(app_v0.app, app_v0.ITEMS)
+warmup\test_id_collision.py:28: in check_no_overwrite
+    assert third.json()["id"] != second_id
+E   assert 2 != 2
+=========================== short test summary info ===========================
+FAILED warmup/test_id_collision.py::test_original_id_collision_is_detected - ...
+============================== 1 failed in 0.57s ==============================
