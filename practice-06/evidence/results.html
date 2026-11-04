@@ -1,0 +1,38 @@
+<!doctype html><html lang="ru"><meta charset="utf-8"><title>Практическая №6 — результаты</title><style>body{font:18px system-ui;margin:36px;background:#f4f6fa;color:#172436}main{max-width:1120px;margin:auto}h1{font-size:30px}.cards{display:flex;gap:18px;margin:22px 0}.card{background:white;padding:20px 28px;border-radius:12px;flex:1}.value{display:block;font-size:36px;font-weight:700;color:#157544}pre{background:#172436;color:#eef4fa;padding:22px;border-radius:12px;font:15px/1.5 Consolas,monospace;overflow:auto}small{color:#40516a}details{margin-top:16px}</style><main><h1>Практическая №6: TemperatureSensor</h1><p>Фактический результат запуска pytest и pytest-cov</p><div class="cards"><div class="card"><span class="value">15 passed</span></div><div class="card"><span class="value">100%</span>покрытие строк: 25 из 25</div></div><pre>Name                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------
+temperature_sensor.py      25      0   100%
+-----------------------------------------------------
+TOTAL                      25      0   100%
+Coverage JSON written to file evidence/coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+============================= 15 passed in 0.16s ==============================</pre><small>Python 3.12.14 · pytest 9.2.0 · pytest-cov 7.1.0</small><details><summary>Полный вывод запуска</summary><pre>============================= test session starts =============================
+collecting ... collected 15 items
+
+test_temperature_sensor.py::test_initial_temperature_is_zero PASSED      [  6%]
+test_temperature_sensor.py::test_changed_temperature_notifies_once PASSED [ 13%]
+test_temperature_sensor.py::test_same_temperature_does_not_notify PASSED [ 20%]
+test_temperature_sensor.py::test_multiple_subscribers_receive_same_value PASSED [ 26%]
+test_temperature_sensor.py::test_unsubscribed_callback_is_skipped_and_others_notified PASSED [ 33%]
+test_temperature_sensor.py::test_temperature_changes_are_delivered[negative] PASSED [ 40%]
+test_temperature_sensor.py::test_temperature_changes_are_delivered[zero] PASSED [ 46%]
+test_temperature_sensor.py::test_temperature_changes_are_delivered[fraction] PASSED [ 53%]
+test_temperature_sensor.py::test_temperature_changes_are_delivered[large] PASSED [ 60%]
+test_temperature_sensor.py::test_unsubscribe_unknown_callback_is_safe PASSED [ 66%]
+test_temperature_sensor.py::test_repeated_unsubscribe_is_safe PASSED     [ 73%]
+test_temperature_sensor.py::test_failing_subscriber_does_not_stop_others PASSED [ 80%]
+test_temperature_sensor.py::test_duplicate_subscription_does_not_duplicate_event PASSED [ 86%]
+test_temperature_sensor.py::test_only_real_changes_are_delivered_in_order PASSED [ 93%]
+test_temperature_sensor.py::test_unsubscription_during_event_applies_to_next_event PASSED [100%]
+
+=============================== tests coverage ================================
+______________ coverage: platform win32, python 3.12.14-final-0 _______________
+
+Name                    Stmts   Miss  Cover   Missing
+-----------------------------------------------------
+temperature_sensor.py      25      0   100%
+-----------------------------------------------------
+TOTAL                      25      0   100%
+Coverage JSON written to file evidence/coverage.json
+Required test coverage of 90% reached. Total coverage: 100.00%
+============================= 15 passed in 0.16s ==============================
+</pre></details></main></html>
