@@ -7,3 +7,4 @@
 | Работа | Тема | Отчет |
 | --- | --- | --- |
 | 1 | Разработка рабочей тестовой документации: The Internet / Checkboxes | [Открыть](practice-01/README.md) |
+| 2 | Разработка плана тестирования: The Internet / Checkboxes | [Открыть](practice-02/README.md) |
